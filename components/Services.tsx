@@ -1,57 +1,45 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { TrendingUp, Briefcase, Building, PieChart, Globe, Shield, DollarSign, LineChart } from 'lucide-react'
+import { Package, TrendingUp, ShoppingBag, Shirt, Globe2, Truck } from 'lucide-react'
 
 export function Services() {
   const services = [
     {
+      icon: Package,
+      title: 'Product Sourcing',
+      description: 'We connect you with reliable manufacturers and suppliers worldwide, ensuring you get the best quality products at competitive prices for the African market.',
+      features: ['Global Supplier Network', 'Quality Assurance', 'Competitive Pricing', 'Product Verification']
+    },
+    {
       icon: TrendingUp,
-      title: 'Wealth Management',
-      description: 'Comprehensive wealth management solutions tailored to high-net-worth individuals and families, focusing on long-term growth and preservation.',
-      features: ['Portfolio Management', 'Estate Planning', 'Tax Optimization', 'Risk Management']
+      title: 'Marketing & Distribution',
+      description: 'Comprehensive marketing strategies and robust distribution networks designed specifically for African markets, helping your products reach the right customers.',
+      features: ['Market Analysis', 'Brand Strategy', 'Distribution Channels', 'Sales Support']
     },
     {
-      icon: Briefcase,
-      title: 'Corporate Finance',
-      description: 'Strategic financial advisory services for businesses seeking growth capital, mergers & acquisitions, or restructuring solutions.',
-      features: ['M&A Advisory', 'Capital Raising', 'Restructuring', 'Valuation Services']
+      icon: Shirt,
+      title: 'Custom Fashion & Style',
+      description: 'Bespoke fashion solutions including custom apparel, accessories, and style consultancy services tailored to modern African aesthetics and international trends.',
+      features: ['Custom Design', 'Quality Fabrics', 'Local Production', 'International Trends']
     },
     {
-      icon: Building,
-      title: 'Real Estate Investment',
-      description: 'Diversified real estate investment opportunities across commercial, residential, and mixed-use developments in key African markets.',
-      features: ['Property Development', 'REIT Management', 'Asset Management', 'Market Analysis']
+      icon: ShoppingBag,
+      title: 'Retail Solutions',
+      description: 'End-to-end retail management solutions from inventory systems to customer experience optimization for both physical and online stores.',
+      features: ['Inventory Management', 'POS Systems', 'E-commerce Setup', 'Staff Training']
     },
     {
-      icon: PieChart,
-      title: 'Portfolio Management',
-      description: 'Active and passive investment strategies designed to optimize returns while managing risk across diverse asset classes.',
-      features: ['Equity Investments', 'Fixed Income', 'Alternative Assets', 'ESG Investing']
+      icon: Globe2,
+      title: 'International Trade',
+      description: 'Facilitating cross-border trade with expertise in import/export regulations, customs clearance, and international logistics across African markets.',
+      features: ['Import/Export', 'Customs Clearance', 'Documentation', 'Trade Compliance']
     },
     {
-      icon: Globe,
-      title: 'International Trade Finance',
-      description: 'Comprehensive trade finance solutions facilitating cross-border commerce and investment across African markets.',
-      features: ['Trade Financing', 'Export Credit', 'Letter of Credit', 'Supply Chain Finance']
-    },
-    {
-      icon: Shield,
-      title: 'Risk Advisory',
-      description: 'Expert risk assessment and mitigation strategies to protect your investments and ensure sustainable growth.',
-      features: ['Risk Assessment', 'Compliance', 'Insurance Solutions', 'Crisis Management']
-    },
-    {
-      icon: DollarSign,
-      title: 'Private Equity',
-      description: 'Strategic investments in high-growth African companies with strong fundamentals and exceptional management teams.',
-      features: ['Growth Capital', 'Buyouts', 'Venture Capital', 'Exit Strategies']
-    },
-    {
-      icon: LineChart,
-      title: 'Market Research',
-      description: 'In-depth market intelligence and research services providing actionable insights for informed investment decisions.',
-      features: ['Market Analysis', 'Due Diligence', 'Industry Reports', 'Economic Forecasts']
+      icon: Truck,
+      title: 'Logistics & Supply Chain',
+      description: 'Efficient logistics and supply chain management ensuring timely delivery and optimal inventory levels across multiple African countries.',
+      features: ['Warehousing', 'Transport Management', 'Supply Chain Optimization', 'Track & Trace']
     }
   ]
 
@@ -66,31 +54,31 @@ export function Services() {
           className="text-center mb-16"
         >
           <span className="text-primary-500 font-semibold text-sm uppercase tracking-wide">Our Services</span>
-          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6">
-            Comprehensive Investment Solutions
+          <h2 className="text-4xl md:text-5xl font-bold font-headline mt-4 mb-6">
+            Comprehensive Business Solutions
           </h2>
           <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-            From wealth management to corporate finance, we offer a full spectrum of investment 
-            services designed to meet your unique financial goals.
+            From sourcing to delivery, we provide end-to-end solutions that help your business 
+            thrive in African markets.
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={service.title}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.05 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
               whileHover={{ y: -8 }}
-              className="glass p-6 rounded-2xl hover:shadow-2xl transition-all duration-300 group"
+              className="glass p-8 rounded-2xl hover:shadow-2xl transition-all duration-300 group"
             >
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                <service.icon className="w-7 h-7 text-white" />
+              <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <service.icon className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 leading-relaxed">
+              <h3 className="text-2xl font-bold font-headline mb-4">{service.title}</h3>
+              <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
                 {service.description}
               </p>
               <ul className="space-y-2">
@@ -114,15 +102,15 @@ export function Services() {
           className="mt-16 text-center"
         >
           <div className="glass p-12 rounded-3xl">
-            <h3 className="text-3xl font-bold mb-4">Ready to Grow Your Wealth?</h3>
+            <h3 className="text-3xl font-bold font-headline mb-4">Ready to Transform Your Business?</h3>
             <p className="text-xl text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-              Let our experienced team help you navigate African markets and achieve your financial goals.
+              Let our experienced team help you navigate African markets and achieve your business goals.
             </p>
             <a
               href="#contact"
-              className="inline-block px-8 py-4 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-all duration-300 font-semibold hover:shadow-lg hover:shadow-primary-500/50"
+              className="inline-block px-8 py-4 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-all duration-300 font-semibold hover:shadow-lg hover:shadow-primary-500/30"
             >
-              Schedule a Consultation
+              Get Started Today
             </a>
           </div>
         </motion.div>

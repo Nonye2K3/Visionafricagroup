@@ -1,6 +1,8 @@
 # Vision Africa Group - Corporate & E-Commerce Websites
 
-A modern, high-end professional website redesign for Vision Africa Investment Group featuring 3D elements, interactive animations, and a sleek light/dark mode interface.
+A modern, high-end professional website redesign for Vision Africa Group featuring a revolutionary 3-layer 3D background system, brand-specific color scheme, and comprehensive business solutions showcase.
+
+> **"Your Link to What's Next"** - Connecting African markets with world-class products and services.
 
 ## 🌟 Features
 

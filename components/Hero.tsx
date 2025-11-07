@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, TrendingUp, Globe, Award } from 'lucide-react'
+import { ArrowRight, TrendingUp, Globe, Award, Package } from 'lucide-react'
 import Link from 'next/link'
 
 export function Hero() {
@@ -23,7 +23,7 @@ export function Hero() {
               className="inline-block"
             >
               <span className="px-4 py-2 rounded-full bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 text-sm font-semibold">
-                Leading Investment Solutions in Africa
+                Vision Africa Group
               </span>
             </motion.div>
 
@@ -31,10 +31,12 @@ export function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.3 }}
-              className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight"
+              className="text-5xl md:text-6xl lg:text-7xl font-bold font-headline leading-tight"
             >
-              Vision Africa
-              <span className="block gradient-text">Investment Group</span>
+              Your Link to
+              <span className="block bg-gradient-to-r from-primary-500 via-accent-500 to-primary-600 bg-clip-text text-transparent">
+                What's Next
+              </span>
             </motion.h1>
 
             <motion.p
@@ -43,9 +45,9 @@ export function Hero() {
               transition={{ delay: 0.4 }}
               className="text-xl text-gray-600 dark:text-gray-400 leading-relaxed"
             >
-              Empowering businesses and individuals across Africa with innovative 
-              investment strategies, sustainable growth solutions, and unparalleled 
-              financial expertise.
+              Connecting African markets with world-class products and services. 
+              From product sourcing to distribution, we're your trusted partner in 
+              building successful businesses across the continent.
             </motion.p>
 
             <motion.div
@@ -55,15 +57,15 @@ export function Hero() {
               className="flex flex-wrap gap-4"
             >
               <Link
-                href="/#contact"
-                className="group px-8 py-4 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-all duration-300 flex items-center space-x-2 hover:shadow-lg hover:shadow-primary-500/50"
+                href="/#about"
+                className="group px-8 py-4 bg-primary-500 text-white rounded-full hover:bg-primary-600 transition-all duration-300 flex items-center space-x-2 hover:shadow-lg hover:shadow-primary-500/30"
               >
-                <span className="font-semibold">Get Started</span>
+                <span className="font-semibold">About Us</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/#services"
-                className="px-8 py-4 border-2 border-primary-500 text-primary-500 rounded-full hover:bg-primary-500 hover:text-white transition-all duration-300 font-semibold"
+                className="px-8 py-4 border-2 border-primary-500 text-primary-500 dark:text-primary-400 rounded-full hover:bg-primary-500 hover:text-white transition-all duration-300 font-semibold"
               >
                 Our Services
               </Link>
@@ -77,16 +79,16 @@ export function Hero() {
               className="grid grid-cols-3 gap-6 pt-8"
             >
               <div className="text-center">
-                <div className="text-3xl font-bold gradient-text">15+</div>
+                <div className="text-3xl font-bold font-headline bg-gradient-to-r from-primary-500 to-accent-500 bg-clip-text text-transparent">15+</div>
                 <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Years Experience</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold gradient-text">500+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Clients Served</div>
+                <div className="text-3xl font-bold font-headline bg-gradient-to-r from-primary-500 to-accent-500 bg-clip-text text-transparent">500+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Partners</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold gradient-text">$2B+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Assets Managed</div>
+                <div className="text-3xl font-bold font-headline bg-gradient-to-r from-primary-500 to-accent-500 bg-clip-text text-transparent">20+</div>
+                <div className="text-sm text-gray-600 dark:text-gray-400 mt-1">Countries</div>
               </div>
             </motion.div>
           </motion.div>
@@ -100,54 +102,54 @@ export function Hero() {
           >
             <div className="grid grid-cols-2 gap-6">
               <motion.div
-                whileHover={{ scale: 1.05, rotate: 2 }}
+                whileHover={{ scale: 1.05, y: -5 }}
                 className="glass p-6 rounded-2xl space-y-4 hover:shadow-xl transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-full bg-primary-500 flex items-center justify-center">
-                  <TrendingUp className="w-6 h-6 text-white" />
+                  <Package className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold">Growth Focused</h3>
+                <h3 className="text-xl font-bold font-headline">Product Sourcing</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  Sustainable investment strategies for long-term success
+                  Access to premium products from global manufacturers
                 </p>
               </motion.div>
 
               <motion.div
-                whileHover={{ scale: 1.05, rotate: -2 }}
+                whileHover={{ scale: 1.05, y: -5 }}
                 className="glass p-6 rounded-2xl space-y-4 hover:shadow-xl transition-all duration-300 mt-8"
               >
                 <div className="w-12 h-12 rounded-full bg-accent-500 flex items-center justify-center">
-                  <Globe className="w-6 h-6 text-white" />
+                  <TrendingUp className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold">Pan-African</h3>
+                <h3 className="text-xl font-bold font-headline">Marketing</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  Deep market knowledge across African economies
+                  Strategic marketing solutions for African markets
                 </p>
               </motion.div>
 
               <motion.div
-                whileHover={{ scale: 1.05, rotate: -2 }}
+                whileHover={{ scale: 1.05, y: -5 }}
                 className="glass p-6 rounded-2xl space-y-4 hover:shadow-xl transition-all duration-300"
               >
                 <div className="w-12 h-12 rounded-full bg-purple-500 flex items-center justify-center">
-                  <Award className="w-6 h-6 text-white" />
+                  <Globe className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold">Award Winning</h3>
+                <h3 className="text-xl font-bold font-headline">Distribution</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  Recognized excellence in investment management
+                  Seamless distribution networks across the continent
                 </p>
               </motion.div>
 
               <motion.div
-                whileHover={{ scale: 1.05, rotate: 2 }}
+                whileHover={{ scale: 1.05, y: -5 }}
                 className="glass p-6 rounded-2xl space-y-4 hover:shadow-xl transition-all duration-300 mt-8"
               >
                 <div className="w-12 h-12 rounded-full bg-indigo-500 flex items-center justify-center">
-                  <TrendingUp className="w-6 h-6 text-white" />
+                  <Award className="w-6 h-6 text-white" />
                 </div>
-                <h3 className="text-xl font-bold">Proven Results</h3>
+                <h3 className="text-xl font-bold font-headline">Excellence</h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm">
-                  Consistent returns for our valued investors
+                  Award-winning service and customer satisfaction
                 </p>
               </motion.div>
             </div>
