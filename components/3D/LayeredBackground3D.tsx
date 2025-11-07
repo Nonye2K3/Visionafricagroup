@@ -9,7 +9,7 @@ import * as THREE from 'three'
 // Layer 1: Large abstract triangular mesh (semi-transparent), floating slowly
 function TriangularMesh() {
   const meshRef = useRef<Mesh>(null)
-  const { theme } = useTheme()
+  const { theme } = useTheme() || { theme: 'light' }
   
   const geometry = useMemo(() => {
     const geo = new BufferGeometry()
@@ -75,7 +75,7 @@ function TriangularMesh() {
 // Layer 2: Mid-size 3D icon shapes (cubes, spheres) swirling subtly
 function FloatingShapes() {
   const groupRef = useRef<THREE.Group>(null)
-  const { theme } = useTheme()
+  const { theme } = useTheme() || { theme: 'light' }
   
   const shapes = useMemo(() => {
     return Array.from({ length: 8 }, (_, i) => ({
@@ -129,7 +129,7 @@ function FloatingShapes() {
 // Layer 3: Small particle or light-dot field in the far background
 function ParticleField() {
   const pointsRef = useRef<THREE.Points>(null)
-  const { theme } = useTheme()
+  const { theme } = useTheme() || { theme: 'light' }
   
   const particlesGeometry = useMemo(() => {
     const geometry = new BufferGeometry()
